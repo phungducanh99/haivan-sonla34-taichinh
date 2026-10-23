@@ -1,0 +1,7 @@
+.DS_Store
+*.docx
+*.xlsx
+*.pdf
+.env
+output/
+.vercel
