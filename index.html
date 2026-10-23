@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mô hình tài chính vận tải — Tuyến Mỹ Đình – Sơn La 34</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#1d2433;--mute:#667085;--line:#e4e7ec;--pri:#1f4e79;--pri2:#2e75b6;--red:#d92d20;--amb:#f79009;--grn:#12b76a;--soft:#eef4fb}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.5}
+header{background:var(--pri);color:#fff;padding:18px 28px}
+header h1{margin:0;font-size:20px}
+header p{margin:4px 0 0;opacity:.85;font-size:13px}
+nav{display:flex;gap:2px;background:#fff;border-bottom:1px solid var(--line);padding:0 20px;position:sticky;top:0;z-index:5;overflow-x:auto}
+nav button{border:0;background:none;padding:12px 14px;font-size:13.5px;color:var(--mute);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
+nav button.on{color:var(--pri);border-bottom-color:var(--pri);font-weight:600}
+main{max-width:1240px;margin:0 auto;padding:20px}
+section{display:none}section.on{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-bottom:16px}
+h2{font-size:17px;margin:0 0 12px;color:var(--pri)}
+h3{font-size:15px;margin:16px 0 8px}
+.grid{display:grid;gap:16px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.g2,.g3,.g4{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:7px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f2f4f7;font-weight:600;color:#344054}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.kpi{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:#fff}
+.kpi .l{font-size:12px;color:var(--mute)}.kpi .v{font-size:22px;font-weight:700;margin-top:2px}.kpi .s{font-size:12px;color:var(--mute)}
+.kpi.red{border-left:5px solid var(--red)}.kpi.amb{border-left:5px solid var(--amb)}.kpi.grn{border-left:5px solid var(--grn)}
+.warn{background:#fff6ed;border:1px solid #fdb022;border-radius:10px;padding:12px 16px;margin-bottom:16px}
+.note{background:var(--soft);border:1px solid #b2ccff;border-radius:10px;padding:12px 16px;margin:10px 0}
+.tag{display:inline-block;padding:1px 7px;border-radius:10px;font-size:11.5px;font-weight:600}
+.t-red{background:#fee4e2;color:#b42318}.t-amb{background:#fef0c7;color:#b54708}.t-grn{background:#d1fadf;color:#027a48}.t-gray{background:#f2f4f7;color:#475467}
+.slider{margin:10px 0}
+.slider label{display:flex;justify-content:space-between;font-size:13px}
+.slider label b{color:var(--pri)}
+.slider input{width:100%}
+.slider .h{font-size:11.5px;color:var(--mute)}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.btns button{border:1px solid var(--pri2);background:#fff;color:var(--pri2);border-radius:6px;padding:6px 10px;cursor:pointer;font-size:12.5px}
+.btns button:hover{background:var(--soft)}
+.bar{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:12.5px}
+.bar .lab{width:210px;flex-shrink:0}
+.bar .trk{flex:1;background:#f2f4f7;border-radius:4px;height:18px;position:relative}
+.bar .fil{height:100%;border-radius:4px}
+.bar .val{width:120px;text-align:right;font-variant-numeric:tabular-nums}
+details{border:1px solid var(--line);border-radius:8px;margin:6px 0;background:#fff}
+details summary{cursor:pointer;padding:9px 12px;font-weight:600;display:flex;justify-content:space-between}
+details .body{padding:4px 14px 12px}
+details details{margin-left:10px}
+.src{font-size:11.5px;color:var(--mute)}
+.formula{font-family:ui-monospace,Menlo,Consolas,monospace;background:#f2f4f7;padding:2px 6px;border-radius:4px;font-size:12.5px}
+.tree{display:flex;flex-direction:column;gap:6px}
+.node{display:inline-block;border:1px solid var(--pri2);border-radius:8px;padding:6px 10px;background:#fff;cursor:pointer}
+.node:hover{background:var(--soft)}
+.node.sel{background:var(--pri2);color:#fff}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.arrow{color:var(--mute)}
+input.act{width:110px;padding:5px;border:1px solid var(--line);border-radius:6px;text-align:right}
+footer{color:var(--mute);font-size:12px;text-align:center;padding:20px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Mô hình tài chính vận tải — Tuyến Mỹ Đình – Sơn La (xe 34 phòng)</h1>
+  <p>Văn phòng TGĐ · Cập nhật 23/10/2026 · Nguồn: họp định mức 22/10 (NotebookLM), file định mức (1).xlsx, ý kiến KTT Nam (Zalo 22/10)</p>
+</header>
+<nav id="nav">
+  <button data-t="s1" class="on">1. Tổng quan</button>
+  <button data-t="s2">2. Cấu trúc P&amp;L</button>
+  <button data-t="s3">3. Mô hình doanh thu</button>
+  <button data-t="s4">4. Mô phỏng P&amp;L</button>
+  <button data-t="s5">5. Chỉ số tài chính</button>
+  <button data-t="s6">6. Chỉ số vận hành &amp; cảnh báo</button>
+  <button data-t="s7">7. Kiểm tra file &amp; thảo luận</button>
+</nav>
+<main>
+
+<!-- ============ 1. TỔNG QUAN ============ -->
+<section id="s1" class="on">
+  <div class="warn" id="ovWarn"></div>
+  <div class="grid g4" id="ovKpi"></div>
+  <div class="grid g2">
+    <div class="card">
+      <h2>So sánh kịch bản (LNTT / DTT)</h2>
+      <div id="ovBars"></div>
+      <p class="src">“Họp chốt” = con số nói trong họp 22/10, dùng bản Excel chạy lúc họp. “Số kế toán” = tính lại theo khấu hao/lãi vay của KTT, CN 3%, QL 9%, dự phòng 5% cho cả hai kịch bản.</p>
+    </div>
+    <div class="card">
+      <h2>Quyết định đã chốt (23/10)</h2>
+      <table>
+        <tr><th>Vấn đề</th><th>Quyết định</th></tr>
+        <tr><td>Chi phí quản lý</td><td>Dùng 9% DTT</td></tr>
+        <tr><td>Khấu hao, lãi vay</td><td>Lấy theo kế toán: 44 tr/xe/tháng; ~13 tr/xe × 5 xe</td></tr>
+        <tr><td>Nhiên liệu</td><td>30.080 đ/L — KTT xác nhận hạch toán nguyên giá này vào chi phí, không chia 1,08</td></tr>
+        <tr><td>Giả định sản lượng (+44% khách/ngày)</td><td>Giao Kinh doanh, MKT xử lý</td></tr>
+        <tr><td>Sửa file định mức</td><td>PDA không sửa; chuyển danh sách lỗi cho KTT Nam</td></tr>
+      </table>
+      <h3>Còn treo</h3>
+      <ul>
+        <li>Tỷ trọng sửa chữa thực tế xe 34 (KTT: 1.000 đ/km là thấp hơn thực tế)</li>
+        <li>Doanh thu hàng khả thi (KTT: 3 tr/chuyến không khả thi)</li>
+        <li>Lịch trả gốc vay để tính DSCR</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. CẤU TRÚC P&L ============ -->
+<section id="s2">
+  <div class="card">
+    <h2>Cấu trúc P&amp;L theo file định mức (“túi gấm”)</h2>
+    <p>Đơn vị: <b>1 chuyến</b> = 2 lượt khứ hồi = 620 km. Mọi tỷ lệ % chia cho <b>doanh thu thuần (chưa VAT)</b>. Bấm từng dòng để xem công thức. Số liệu: KB Xuất sắc, áp số kế toán.</p>
+    <div id="plTree"></div>
+  </div>
+</section>
+
+<!-- ============ 3. MÔ HÌNH DOANH THU ============ -->
+<section id="s3">
+  <div class="card">
+    <h2>Cây doanh thu</h2>
+    <p class="formula">DT tháng = Xe × Lượt/xe/ngày × Ngày × [ Giường × LF × Giá BQ + DT hàng/lượt ]&nbsp;&nbsp;·&nbsp;&nbsp;DT thuần = DT gồm VAT / 1,08</p>
+    <div class="row" style="margin-top:10px">
+      <span class="node">DT tháng</span><span class="arrow">=</span>
+      <span class="node">Số lượt</span><span class="arrow">(Xe × Lượt/xe/ngày × Ngày)</span><span class="arrow">×</span>
+      <span class="node">DT/lượt</span><span class="arrow">(DT khách/lượt + DT hàng/lượt)</span>
+    </div>
+    <div class="row" style="margin-top:6px">
+      <span class="arrow">DT khách/lượt =</span><span class="node">Giường</span><span class="arrow">×</span><span class="node">LF</span><span class="arrow">×</span><span class="node">Giá BQ thực thu</span>
+      <span class="arrow">← giá niêm yết theo hạng · mix chiều A/B, giờ, ngày · khuyến mại</span>
+    </div>
+  </div>
+  <div class="grid g2">
+    <div class="card">
+      <h2>Điều chỉnh driver</h2>
+      <div class="btns">
+        <button onclick="revPreset('cur')">Hiện trạng</button>
+        <button onclick="revPreset('xs')">KB Xuất sắc</button>
+        <button onclick="revPreset('dat')">KB Đạt</button>
+      </div>
+      <div id="revSliders"></div>
+    </div>
+    <div class="card">
+      <h2>Kết quả doanh thu</h2>
+      <div class="grid g2" id="revKpi"></div>
+      <h3>Cầu doanh thu: Hiện trạng → lựa chọn hiện tại</h3>
+      <div id="revBridge"></div>
+      <p class="src">Phân rã tuần tự: vòng quay → lấp đầy → giá → hàng. Hiện trạng [họp]: 5 xe, 1,36 lượt/xe/ngày, 21 khách/lượt, 320k, hàng 1,1 tr/lượt.</p>
+      <div class="note" id="revNote"></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Các chiều cần phân tách khi theo dõi</h2>
+    <table>
+      <tr><th>Chiều</th><th>Lý do</th><th>Dữ liệu</th></tr>
+      <tr><td>Chiều A (HN → SL) / B (SL → HN)</td><td>Chiều B ban ngày bán 320k, vắng khách; chiều A và B đêm bán 365k [họp]</td><td>Phơi lệnh</td></tr>
+      <tr><td>Khung giờ ngày / đêm</td><td>Như trên; cơ sở cho giá linh hoạt (giờ xấu 200–250k)</td><td>Phơi lệnh</td></tr>
+      <tr><td>Ngày thường / cuối tuần</td><td>File có cấu trúc giá riêng nhưng KB đang để chung</td><td>Phơi lệnh</td></tr>
+      <tr><td>Kênh bán, hạng giường, khuyến mại</td><td>Đo yield thực</td><td>Tài liệu không đề cập đã có dữ liệu</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 4. MÔ PHỎNG P&L ============ -->
+<section id="s4">
+  <div class="note">Mô hình tái dựng từ sheet <b>KB Xuất sắc</b> (cột Sơn La 34) với số kế toán. Kiểm tra: tham số mặc định cho LNTT = <b id="chkL"></b> đ/chuyến (<span id="chkR"></span>), khớp tính tay. Đây là công cụ ước tính, không thay file chính thức của FBU.</div>
+  <div class="grid g2">
+    <div class="card">
+      <h2>Giả định</h2>
+      <div class="btns">
+        <button onclick="simPreset('xs')">KB Xuất sắc</button>
+        <button onclick="simPreset('dat')">KB Đạt</button>
+        <button onclick="simPreset('cur')">Hiện trạng (ước tính)</button>
+        <button onclick="simPreset('meet')">Giả định lúc họp</button>
+      </div>
+      <h3>Kinh doanh</h3><div id="simS1"></div>
+      <h3>Chi phí</h3><div id="simS2"></div>
+    </div>
+    <div>
+      <div class="grid g3" id="simKpi"></div>
+      <div class="card" style="margin-top:16px">
+        <h2>P&amp;L / chuyến</h2>
+        <div id="simPL"></div>
+      </div>
+      <div class="card">
+        <h2>Độ nhạy ROS theo số khách/chuyến</h2>
+        <div id="simSens"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. CHỈ SỐ TÀI CHÍNH ============ -->
+<section id="s5">
+  <div class="card">
+    <h2>Chỉ số tài chính</h2>
+    <p>Giá trị cột “Hiện tại” cập nhật theo tab <b>Mô phỏng P&amp;L</b>.</p>
+    <div id="finTbl"></div>
+  </div>
+  <div class="card">
+    <h2>Khả năng trả nợ (DSCR)</h2>
+    <div class="slider"><label>Nợ gốc phải trả / xe / tháng <b id="dsV"></b></label><input type="range" id="dsG" min="0" max="90" step="1" value="45"><div class="h">Chưa có số thực tế, cần KTT cung cấp lịch trả gốc. Kéo để thử.</div></div>
+    <div class="grid g3" id="dsKpi"></div>
+    <p class="src">DSCR = (EBITDA − thuế TNDN) / (gốc + lãi). Ngưỡng 1,2 là thông lệ ngân hàng (phỏng đoán, chưa kiểm chứng với ngân hàng của HV).</p>
+    <div class="note"><b>DSCR đang lạc quan:</b> EBITDA chưa trừ sửa chữa lớn / capex duy trì (file để sửa chữa lớn = 0), tức đang giả định toàn bộ tiền khấu hao được dùng trả nợ, không giữ lại quỹ đại tu.</div>
+  </div>
+</section>
+
+<!-- ============ 6. CHỈ SỐ VẬN HÀNH ============ -->
+<section id="s6">
+  <div class="card">
+    <h2>Chỉ số vận hành</h2>
+    <div class="btns" id="opFilter">
+      <button data-g="all">Tất cả</button><button data-g="Năng suất tài sản">Năng suất tài sản</button><button data-g="Bán hàng">Bán hàng</button><button data-g="Chi phí vận hành">Chi phí vận hành</button><button data-g="Chất lượng / an toàn">Chất lượng / an toàn</button>
+    </div>
+    <div id="opTbl"></div>
+  </div>
+  <div class="card">
+    <h2>Bộ cảnh báo tối thiểu (đề xuất — chờ duyệt ngưỡng)</h2>
+    <p>Nhập số thực tế tuần để xem màu cảnh báo. 6 chỉ số lấy được từ phơi lệnh, Excel làm được.</p>
+    <div id="alTbl"></div>
+    <div class="note">Ngưỡng tính theo chi phí sửa chữa 1.000 đ/km. Khi KTT có số thực tế, ngưỡng LF hòa vốn và DT/km sẽ tăng. Chưa nên ban hành trước đó.</div>
+  </div>
+</section>
+
+<!-- ============ 7. KIỂM TRA FILE ============ -->
+<section id="s7">
+  <div class="card">
+    <h2>File (1).xlsx vs ý kiến KTT Nam</h2>
+    <table>
+      <tr><th>Giả định</th><th>KTT Nam (Zalo 21:43)</th><th>KB Xuất sắc</th><th>KB Đạt</th><th>Trạng thái</th></tr>
+      <tr><td>Khấu hao/xe/tháng</td><td>44 tr</td><td>41,69 tr</td><td>51,71 tr</td><td><span class="tag t-red">Chưa khớp</span></td></tr>
+      <tr><td>Lãi vay</td><td>13 tr × 5 xe</td><td>13,67 tr × 5</td><td>14,04 tr × <b>6</b></td><td><span class="tag t-red">Đạt sai số xe</span></td></tr>
+      <tr><td>CN / QL / dự phòng lái</td><td>—</td><td>3% / 9% / 5%</td><td>2% / 8% / 0%</td><td><span class="tag t-red">Không đồng nhất</span></td></tr>
+      <tr><td>Nhiên liệu</td><td>Không trừ VAT</td><td>30.080</td><td>30.080</td><td><span class="tag t-grn">Đúng</span></td></tr>
+      <tr><td>Hàng 3 tr/chuyến</td><td>Không khả thi</td><td>3 tr</td><td>3 tr</td><td><span class="tag t-amb">Giao KD/MKT</span></td></tr>
+      <tr><td>Sửa chữa 1.000 đ/km</td><td>Thấp hơn thực tế</td><td>1.001</td><td>1.001</td><td><span class="tag t-amb">Chờ số thực tế</span></td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h2>Lỗi công thức / logic</h2>
+    <div class="btns" id="errFilter"><button data-s="all">Tất cả</button><button data-s="Cao">Cao</button><button data-s="Trung bình">Trung bình</button><button data-s="Thấp">Thấp</button></div>
+    <div id="errTbl"></div>
+  </div>
+  <div class="card">
+    <h2>Điểm thảo luận</h2>
+    <div id="disc"></div>
+  </div>
+</section>
+</main>
+<footer>Phân biệt: <b>[họp]</b> nội dung cuộc họp · <b>[file]</b> Excel định mức · <b>[KTT]</b> ý kiến KTT · <b>ước tính</b> do VP TGĐ tính · <b>phỏng đoán</b> chưa có cơ sở chắc chắn.</footer>
+
+<script id="model">
+// ===== MÔ HÌNH P&L / CHUYẾN (tái dựng từ sheet KB Xuất sắc, cột Sơn La 34) =====
+const BASE = {N:46,P:350000,H:3000000,V:1.8,xe:5,days:30,km:620,
+  fuel:30080,lper100:28,sc:1001,kh:44021212,lv:13665795,
+  ql:0.09,rd:0.05,cn:0.03,dp:0.05,vat:1.08,tax:0.2};
+function model(a){
+  const T=a.V*a.days/2;                 // chuyến/xe/tháng
+  const G=a.N*a.P+a.H, D=G/a.vat;       // DT gồm VAT, DT thuần
+  const c={};
+  // Biến đổi
+  c.ns = 2100000 + a.dp*1600000 + 5258000*0.235*3/T + 23000000/12/T + 500000/T + 400000/T;
+  c.fuel = a.fuel*a.lper100*a.km/100;
+  c.sc = a.sc*a.km;
+  c.rua = 150000 + 4100*0.7*a.N;
+  // Cố định
+  c.ben = 360000+211000+170000 + 733000/T;
+  c.gps = 680000/T;
+  c.bh = (5058454.545+36515595.45)/12/T;
+  c.kh = a.kh/T;
+  c.khac = (150000+400000+990000+750000+13500000/14)/T + 50000 + a.cn*G;
+  c.vh = c.ns+c.fuel+c.sc+c.rua+c.ben+c.gps+c.bh+c.kh+c.khac;
+  // Bán hàng
+  c.nsbh = 0.135*a.H + 0.004*D + 0.016*a.N*a.P/1.1 + 3*1235630/(a.xe*T) + 3*30000/T; // BH+KPCĐ tính cho cả tuyến, đồng phục theo xe
+  c.tc = 30000*a.N*0.5;
+  c.hh = 0.01*D;
+  c.hcbh = 53888888/14/T;
+  c.rdv = a.rd*D;
+  c.bhk = 1400*a.N + 700*a.N;
+  c.bhang = c.nsbh+c.tc+c.hh+c.hcbh+c.rdv+c.bhk;
+  c.qlv = a.ql*D;
+  c.lvv = a.lv/T;
+  const gross = D-c.vh, ebit = gross-c.bhang-c.qlv, lntt = ebit-c.lvv;
+  const thue = Math.max(0,lntt)*a.tax;
+  return {T,G,D,c,gross,ebit,lntt,thue,lnst:lntt-thue,ebitda:ebit+c.kh,
+    ros:lntt/D, cogs:c.vh/D, dtkm:D/a.km, cpkm:(D-lntt)/a.km, lf:a.N/2/34};
+}
+function solveN(a,target){ // số khách/chuyến để ROS = target
+  let lo=0,hi=68;
+  for(let i=0;i<60;i++){const m=(lo+hi)/2; model({...a,N:m}).ros<target?lo=m:hi=m;}
+  return (lo+hi)/2;
+}
+function needN(a,target){ // null nếu đầy xe (68) vẫn không đạt
+  if(model({...a,N:68}).ros<target) return null;
+  if(model({...a,N:0}).ros>=target) return 0;
+  return solveN(a,target);
+}
+</script>
+<script>
+// ===== TIỆN ÍCH =====
+const $=s=>document.querySelector(s);
+const fm=(x,d=0)=>x.toLocaleString('vi-VN',{maximumFractionDigits:d,minimumFractionDigits:d});
+const tr=x=>fm(x/1e6,2)+' tr';
+const pc=(x,d=1)=>fm(x*100,d)+'%';
+document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#nav button').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('section').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on'); $('#'+b.dataset.t).classList.add('on'); window.scrollTo(0,0);
+});
+function bars(el,items,max,fmt){
+  el.innerHTML=items.map(i=>`<div class="bar"><div class="lab">${i.l}</div><div class="trk"><div class="fil" style="width:${Math.max(0,Math.min(100,i.v/max*100))}%;background:${i.c||'#2e75b6'}"></div></div><div class="val">${fmt(i.v)}</div></div>`).join('');
+}
+function kpi(l,v,s,cls=''){return `<div class="kpi ${cls}"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${s||''}</div></div>`}
+function slider(id,lab,min,max,step,val,fmtf,hint){
+  return `<div class="slider"><label>${lab} <b id="${id}V"></b></label><input type="range" id="${id}" min="${min}" max="${max}" step="${step}" value="${val}"><div class="h">${hint||''}</div></div>`;
+}
+const col3=(v,r,g,hi=true)=>hi?(v<r?'red':v<g?'amb':'grn'):(v>r?'red':v>g?'amb':'grn');
+const lfTxt=n=>n===null?'Không đạt kể cả đầy xe':pc(n/68)+' ('+fm(n,1)+' khách/chuyến)';
+// Ngưỡng tính từ BASE (giả định chốt 23/10) — dùng chung cho mọi tab
+const TH=(function(){
+  const be=needN(BASE,0), t10=needN(BASE,0.10), t10h=needN({...BASE,H:2200000},0.10);
+  return {be,t10,t10h,lfBe:be/68*100,lfT10:t10/68*100,lfT10h:t10h/68*100,
+    kmBe:model({...BASE,N:be}).dtkm,kmT10:model({...BASE,N:t10}).dtkm};
+})();
+// Cầu doanh thu (dùng ở Tab 3 và Tab 7)
+function bridge(c,x){
+  const L0=c.xe*c.V*30, L=x.xe*x.V*30;
+  const s=[(L-L0)*(c.K*c.P+c.Hl), L*(x.K-c.K)*c.P, L*x.K*(x.P-c.P), L*(x.Hl-c.Hl)];
+  return {s,tot:s.reduce((p,q)=>p+q,0),DT0:L0*(c.K*c.P+c.Hl),DT:L*(x.K*x.P+x.Hl)};
+}
+
+// ===== 1. TỔNG QUAN =====
+(function(){
+  const xs=model(BASE), dat=model({...BASE,N:44});
+  const xs2=model({...BASE,H:2200000}), dat2=model({...BASE,N:44,H:2200000});
+  $('#ovWarn').innerHTML=`<b>Kết luận chính.</b> Khi áp số kế toán (khấu hao 44 tr/xe/tháng, lãi vay ~13,7 tr/xe/tháng) và chi phí quản lý 9%, <b>không kịch bản nào đạt ROS 10%</b>. KB Xuất sắc ≈ ${pc(xs.ros)}, KB Đạt ≈ ${pc(dat.ros)}. Nếu doanh thu hàng chỉ 2,2 tr/chuyến: ${pc(xs2.ros)} và ${pc(dat2.ros)} (gần hòa vốn). Muốn ROS 10% cần lấp đầy ≈ ${pc(TH.t10/68)} (hàng 3 tr) đến ≈ ${pc(TH.t10h/68)} (hàng 2,2 tr).`;
+  $('#ovKpi').innerHTML=
+    kpi('ROS KB Xuất sắc (số kế toán)',pc(xs.ros),'Mục tiêu 10%','amb')+
+    kpi('ROS KB Đạt (số kế toán)',pc(dat.ros),'Mục tiêu 10%','red')+
+    kpi('LF cần cho ROS 10%',pc(TH.t10/68),'Hàng 3 tr; với 2,2 tr: '+pc(TH.t10h/68),'amb')+
+    kpi('LF hiện trạng',pc(21/34),'21 khách/lượt [họp]','red');
+  bars($('#ovBars'),[
+    {l:'KB Xuất sắc — họp chốt',v:.104,c:'#98a2b3'},
+    {l:'KB Xuất sắc — file (1).xlsx',v:.0623,c:'#84adea'},
+    {l:'KB Xuất sắc — số kế toán',v:xs.ros,c:'#1f4e79'},
+    {l:'KB Xuất sắc — kế toán, hàng 2,2 tr',v:xs2.ros,c:'#f79009'},
+    {l:'KB Đạt — họp chốt',v:.0672,c:'#98a2b3'},
+    {l:'KB Đạt — file (1).xlsx',v:.0334,c:'#84adea'},
+    {l:'KB Đạt — số kế toán',v:dat.ros,c:'#1f4e79'},
+    {l:'KB Đạt — kế toán, hàng 2,2 tr',v:dat2.ros,c:'#f79009'},
+  ],0.12,v=>pc(v,2));
+})();
+
+// ===== 2. CÂY P&L =====
+(function(){
+  const r=model(BASE), D=r.D, c=r.c;
+  const L=(name,v,f,kids)=>`<details${kids?'':''}><summary><span>${name}</span><span>${tr(v)} · ${pc(v/D)}</span></summary><div class="body"><div class="formula">${f}</div>${kids||''}</div></details>`;
+  $('#plTree').innerHTML=
+   L('A. Doanh thu thuần',D,'(Khách × Giá BQ + Hàng) / 1,08 = (46 × 350.000 + 3.000.000) / 1,08',
+     L('Doanh thu khách (thuần)',46*350000/1.08,'46 khách × 350k = 16,10 tr gồm VAT; / 1,08. File có bảng hạng giường nhưng 2 sheet KB nhập thẳng số khách × giá BQ')+
+     L('Doanh thu hàng (thuần)',3e6/1.08,'3,00 tr gồm VAT (nhập cứng); / 1,08. KTT: 3 tr không khả thi; thực tế 2,2 tr'))+
+   L('B. Chi phí vận hành (giá vốn)',c.vh,'Biến đổi + Cố định. Mục tiêu ≤ 70% DTT [họp]',
+     L('Nhân sự lái xe, tiếp viên',c.ns,'2 lái × 400k × 2 lượt + TV 250k × 2 + dự phòng 5% lương lái + BHXH 21,5% & KPCĐ 2% trên 5.258.000 + lương T13 + lễ tết + điện thoại (chia số chuyến/tháng)')+
+     L('Nhiên liệu',c.fuel,'30.080 đ/L × 28 L/100km × 620 km = 173,6 L. KTT: hạch toán nguyên giá, không chia 1,08')+
+     L('Sửa chữa',c.sc,'1.001 đ/km × 620 km (dầu nhờn 181, lốp 292, ắc quy 27, BDĐK 326, SCTX 92, điều hòa 83; sửa chữa lớn = 0). KTT: thấp hơn thực tế')+
+     L('Rửa xe, khăn nước',c.rua,'50k + 100k + 4.100 đ × khách × 70%')+
+     L('Bến bãi, cầu đường, đường bộ',c.ben,'HN 360k + SL 211k (141+60+10, đã bỏ hoa hồng 275k từ 01/11) + cầu đường 85k × 2 + đường bộ/đăng kiểm 733k/tháng')+
+     L('GPS, bảo hiểm',c.gps+c.bh,'GPS 680k/tháng; bảo hiểm TNDS 5,058 tr/năm + vật chất 1,35% × 79% × nguyên giá 3,698 tỷ / 1,08 = 36,516 tr/năm')+
+     L('Khấu hao',c.kh,'44,02 tr/xe/tháng = 3,698 tỷ (3,98 tỷ / 1,1 + 2% trước bạ) / 84 tháng [KTT]')+
+     L('Trực tiếp khác (gồm CN 3%)',c.khac,'Đồng phục, wifi, giặt là, bãi đỗ, nhà nghỉ lái xe, chi phí khác NG + CN 3% × DT gồm VAT'))+
+   L('V. Lợi nhuận gộp',r.gross,'DTT − Chi phí vận hành')+
+   L('VI. Chi phí bán hàng',c.bhang,'',
+     L('Nhân sự bán hàng',c.nsbh,'OCC 13,5% × DT hàng + NVKD 0,4% × DTT + tổng đài 1,6% × DT khách / 1,1 + BH, đồng phục')+
+     L('Xe trung chuyển',c.tc,'30.000 đ × 50% số khách')+
+     L('Hoa hồng khách hàng',c.hh,'1% × DTT')+
+     L('Hành chính bán hàng',c.hcbh,'Điện nước, điện thoại, VPP, thuê VP bán hàng — phân bổ theo 14 xe')+
+     L('R&D / trải nghiệm KH',c.rdv,'5% × DTT (thay cho A&P 2% cũ → tăng thực +3%)')+
+     L('Khác (ăn KH, SMS)',c.bhk,'(20% × 7.000 + 700) × khách'))+
+   L('VIII. Chi phí quản lý',c.qlv,'9% × DTT [quyết định 23/10]')+
+   L('IX. LN hoạt động KD (≈ EBIT)',r.ebit,'LN gộp − bán hàng − quản lý')+
+   L('X. Lãi vay',c.lvv,'13,67 tr/xe/tháng ÷ số chuyến [KTT: ~13 tr × 5 xe]')+
+   L('XII. Lợi nhuận trước thuế',r.lntt,'EBIT − lãi vay')+
+   L('XIV. Lợi nhuận sau thuế',r.lnst,'LNTT × (1 − 20%)');
+})();
+
+// ===== 3. DOANH THU =====
+const CUR={xe:5,V:1.36,K:21,P:320000,Hl:1100000};
+const REVP={cur:CUR,xs:{xe:5,V:1.8,K:23,P:350000,Hl:1500000},dat:{xe:5,V:1.8,K:22,P:350000,Hl:1500000}};
+$('#revSliders').innerHTML=
+  slider('rXe','Số xe vận doanh',3,6,1,5,null,'Biên chế 5 xe 34 phòng')+
+  slider('rV','Lượt/xe/ngày',1,2.2,0.02,1.8,null,'Chuẩn 1,8 [họp]; hiện 1,36')+
+  slider('rK','Khách/lượt',12,34,0.5,23,null,'34 giường; hiện 21')+
+  slider('rP','Giá BQ thực thu (gồm VAT)',250000,420000,5000,350000,null,'Hiện 320k; KB 350k')+
+  slider('rH','DT hàng/lượt (gồm VAT)',0,2500000,50000,1500000,null,'Hiện 1,1 tr; KB 1,5 tr');
+function revPreset(k){const p=REVP[k];$('#rXe').value=p.xe;$('#rV').value=p.V;$('#rK').value=p.K;$('#rP').value=p.P;$('#rH').value=p.Hl;revCalc();}
+function revCalc(){
+  const xe=+$('#rXe').value,V=+$('#rV').value,K=+$('#rK').value,P=+$('#rP').value,H=+$('#rH').value;
+  $('#rXeV').textContent=xe;$('#rVV').textContent=fm(V,2);$('#rKV').textContent=fm(K,1)+' ('+pc(K/34)+')';$('#rPV').textContent=fm(P);$('#rHV').textContent=fm(H);
+  const L=xe*V*30, rl=K*P+H;
+  const c=CUR, br=bridge(c,{xe,V,K,P,Hl:H}), DT=br.DT, DT0=br.DT0;
+  $('#revKpi').innerHTML=kpi('DT tháng gồm VAT',tr(DT),'Thuần: '+tr(DT/1.08))+kpi('So hiện trạng',(DT>=DT0?'+':'')+pc(DT/DT0-1),tr(DT-DT0))+
+    kpi('Khách/ngày',fm(xe*V*K,0),'Hiện ≈ '+fm(c.xe*c.V*c.K,0))+kpi('DT thuần/km',fm(rl/1.08/310)+' đ','Mục tiêu XS 28.500');
+  // cầu tuần tự; chỉ hiện % khi tổng > 0 và mọi thành phần cùng dấu dương
+  const [s1,s2,s3,s4]=br.s, tot=br.tot;
+  const items=[{l:'Vòng quay & số xe',v:s1},{l:'Lấp đầy',v:s2},{l:'Giá vé',v:s3},{l:'Hàng hóa',v:s4}];
+  const showPct=tot>0&&items.every(i=>i.v>=0);
+  const mx=Math.max(...items.map(i=>Math.abs(i.v)),1);
+  $('#revBridge').innerHTML=items.map(i=>`<div class="bar"><div class="lab">${i.l}</div><div class="trk"><div class="fil" style="width:${Math.abs(i.v)/mx*100}%;background:${i.v>=0?'#12b76a':'#d92d20'}"></div></div><div class="val">${(i.v>=0?'+':'')+tr(i.v)}${showPct?' · '+pc(i.v/tot,1):''}</div></div>`).join('')+(showPct?'':'<p class="src">Không hiện tỷ trọng % vì các yếu tố ngược chiều hoặc tổng thay đổi ≤ 0.</p>');
+  const dk=xe*V*K/(c.xe*c.V*c.K)-1;
+  $('#revNote').innerHTML=`Lượng khách/ngày cần tăng <b>${pc(dk)}</b> so với hiện trạng. Vòng quay chỉ đạt được nếu có thêm cầu — chỉ tiêu nên giao KD/MKT theo <b>tổng khách/ngày</b>, không chỉ theo LF.`;
+}
+document.querySelectorAll('#revSliders input').forEach(i=>i.oninput=revCalc);revCalc();
+
+// ===== 4. MÔ PHỎNG =====
+const KH0=BASE.kh/1e6, LV0=BASE.lv/1e6; // số chính xác theo kế toán
+const SIMP={
+  xs:{N:46,P:350000,H:3000000,V:1.8,sc:1001,fuel:30080,kh:KH0,lv:LV0,ql:9,rd:5},
+  dat:{N:44,P:350000,H:3000000,V:1.8,sc:1001,fuel:30080,kh:KH0,lv:LV0,ql:9,rd:5},
+  cur:{N:42,P:320000,H:2200000,V:1.36,sc:1001,fuel:30080,kh:KH0,lv:LV0,ql:9,rd:5},
+  meet:{N:46,P:350000,H:3000000,V:1.8,sc:1001,fuel:27852,kh:39.73,lv:6.45,ql:9,rd:5}};
+$('#simS1').innerHTML=
+  slider('sN','Khách/chuyến (2 lượt)',20,68,1,46,null,'68 giường/chuyến; hiện 42')+
+  slider('sP','Giá BQ (gồm VAT)',250000,420000,5000,350000,null,'')+
+  slider('sH','DT hàng/chuyến (gồm VAT)',0,5000000,100000,3000000,null,'KTT: 3 tr không khả thi; thực tế 2,2 tr')+
+  slider('sV','Lượt/xe/ngày',1,2.2,0.02,1.8,null,'Ảnh hưởng chi phí cố định phân bổ/chuyến');
+$('#simS2').innerHTML=
+  slider('sSc','Sửa chữa (đ/km)',800,2500,1,1001,null,'KTT: 1.000 đ/km thấp hơn thực tế')+
+  slider('sF','Giá dầu (đ/L)',25000,35000,1,30080,null,'KTT: hạch toán nguyên giá, không chia 1,08')+
+  slider('sKh','Khấu hao (tr/xe/tháng)',30,65,'any',KH0,null,'Kế toán: 44,02 tr (84 tháng); 60 tháng ≈ 61,6 tr')+
+  slider('sLv','Lãi vay (tr/xe/tháng)',0,20,'any',LV0,null,'Kế toán: 13,67 tr (KTT nhắn ~13 tr)')+
+  slider('sQl','Chi phí quản lý (% DTT)',3,12,0.5,9,null,'Chốt 9%')+
+  slider('sRd','R&D / trải nghiệm KH (% DTT)',0,8,0.5,5,null,'');
+function simPreset(k){const p=SIMP[k];$('#sN').value=p.N;$('#sP').value=p.P;$('#sH').value=p.H;$('#sV').value=p.V;$('#sSc').value=p.sc;$('#sF').value=p.fuel;$('#sKh').value=p.kh;$('#sLv').value=p.lv;$('#sQl').value=p.ql;$('#sRd').value=p.rd;simCalc();}
+let SIM=null;
+function simArgs(){return {...BASE,N:+$('#sN').value,P:+$('#sP').value,H:+$('#sH').value,V:+$('#sV').value,sc:+$('#sSc').value,fuel:+$('#sF').value,kh:+$('#sKh').value*1e6,lv:+$('#sLv').value*1e6,ql:+$('#sQl').value/100,rd:+$('#sRd').value/100};}
+function simCalc(){
+  const a=simArgs(), r=model(a); SIM={a,r};
+  $('#sNV').textContent=a.N+' (LF '+pc(r.lf)+')';$('#sPV').textContent=fm(a.P);$('#sHV').textContent=fm(a.H);$('#sVV').textContent=fm(a.V,2)+' → '+fm(r.T,1)+' chuyến/xe/tháng';
+  $('#sScV').textContent=fm(a.sc);$('#sFV').textContent=fm(a.fuel);$('#sKhV').textContent=fm(a.kh/1e6,2);$('#sLvV').textContent=fm(a.lv/1e6,2);$('#sQlV').textContent=fm(a.ql*100,1)+'%';$('#sRdV').textContent=fm(a.rd*100,1)+'%';
+  const be=needN(a,0), t10=needN(a,0.10);
+  $('#simKpi').innerHTML=
+    kpi('ROS (LNTT/DTT)',pc(r.ros,2),'Mục tiêu 10%',col3(r.ros,0,0.10))+
+    kpi('Tỷ lệ giá vốn',pc(r.cogs),'Mục tiêu ≤ 70%',r.cogs>0.75?'red':r.cogs>0.70?'amb':'grn')+
+    kpi('LNTT tuyến / tháng',tr(r.lntt*r.T*a.xe),tr(r.lntt)+' / chuyến',col3(r.lntt,0,0.1*r.D))+
+    kpi('LF hòa vốn',be===null?'Không đạt':pc(be/68),be===null?'Đầy xe vẫn lỗ':fm(be,1)+' khách/chuyến',be===null?'red':'')+
+    kpi('LF cho ROS 10%',t10===null?'Không đạt':pc(t10/68),t10===null?'Đầy xe vẫn dưới 10%':fm(t10,1)+' khách/chuyến',t10===null?'red':'')+
+    kpi('DT thuần/km vs chi phí/km',fm(r.dtkm),'Chi phí/km: '+fm(r.cpkm),r.dtkm<r.cpkm?'red':'grn');
+  const c=r.c, rows=[
+    ['Doanh thu thuần',r.D,1],['Nhân sự lái, TV',-c.ns],['Nhiên liệu',-c.fuel],['Sửa chữa',-c.sc],['Rửa xe, khăn nước',-c.rua],['Bến bãi, cầu đường',-c.ben],['GPS, bảo hiểm',-(c.gps+c.bh)],['Khấu hao',-c.kh],['Trực tiếp khác + CN',-c.khac],
+    ['Lợi nhuận gộp',r.gross,1],['Chi phí bán hàng (gồm R&D)',-c.bhang],['Chi phí quản lý',-c.qlv],['EBIT',r.ebit,1],['Lãi vay',-c.lvv],['LNTT',r.lntt,1],['Thuế TNDN',r.thue?-r.thue:0],['LNST',r.lnst,1]];
+  $('#simPL').innerHTML='<table><tr><th>Khoản</th><th class="n">đ/chuyến</th><th class="n">% DTT</th><th style="width:35%"></th></tr>'+rows.map(([n,v,b])=>{
+    const color=b?(v<0?'#b42318':'#2e75b6'):'#98a2b3';
+    const st=b?(v<0?' style="font-weight:700;background:#fef3f2;color:#b42318"':' style="font-weight:600;background:#f9fafb"'):'';
+    return `<tr${st}><td>${n}</td><td class="n">${fm(v)}</td><td class="n">${pc(v/r.D)}</td><td><div style="height:10px;width:${Math.min(100,Math.abs(v)/r.D*100)}%;background:${color};border-radius:3px"></div></td></tr>`;}).join('')+'</table><p class="src">Xám = chi phí; xanh = dòng lợi nhuận dương; đỏ = dòng lợi nhuận âm. Thanh cắt ở 100% DTT.</p>';
+  const sens=[];for(let n=38;n<=56;n+=2){const m=model({...a,N:n});sens.push({l:n+' khách (LF '+pc(n/68,0)+')',v:m.ros,c:m.ros<0?'#d92d20':m.ros<0.1?'#f79009':'#12b76a'});}
+  const lo=Math.min(0,...sens.map(i=>i.v)), hi=Math.max(0.12,...sens.map(i=>i.v)), span=hi-lo;
+  const x0=(0-lo)/span*100, x10=(0.10-lo)/span*100;
+  $('#simSens').innerHTML=sens.map(i=>{const a1=Math.min(i.v,0),b1=Math.max(i.v,0);return `<div class="bar"><div class="lab">${i.l}</div><div class="trk"><div style="position:absolute;left:${x0}%;top:-2px;bottom:-2px;width:1px;background:#344054"></div><div style="position:absolute;left:${x10}%;top:-2px;bottom:-2px;width:1px;border-left:1px dashed #12b76a"></div><div class="fil" style="position:absolute;left:${(a1-lo)/span*100}%;width:${(b1-a1)/span*100}%;background:${i.c}"></div></div><div class="val">${pc(i.v,1)}</div></div>`}).join('')+`<p class="src">Thang tự co giãn: ${pc(lo,0)} đến ${pc(hi,0)}. Vạch đen = 0%; vạch xanh nét đứt = 10%. Đỏ = lỗ, cam = dưới 10%, xanh = ≥ 10%.</p>`;
+  finCalc(); dsCalc();
+}
+document.querySelectorAll('#simS1 input,#simS2 input').forEach(i=>i.oninput=simCalc);
+// Kéo tay khấu hao/lãi vay: làm tròn 0,01 tr; nút preset giữ số chính xác
+['#sKh','#sLv'].forEach(s=>$(s).oninput=e=>{e.target.value=Math.round(+e.target.value*100)/100;simCalc();});
+(function(){const r=model(BASE);$('#chkL').textContent=fm(r.lntt);$('#chkR').textContent=pc(r.ros,2);})();
+
+// ===== 5. TÀI CHÍNH =====
+function finCalc(){
+  const {a,r}=SIM, perXe=r.T;
+  const cm=(model({...a,N:a.N+1}).lntt-r.lntt);
+  const roic=(r.ebit>0?r.ebit*(1-a.tax):r.ebit)*perXe*12/3697781818;
+  const beF=needN(a,0);
+  const rows=[
+    ['Doanh thu','DT thuần/km kế hoạch','DTT / km kế hoạch',fm(r.dtkm)+' đ','Mục tiêu XS 28.500 [họp]'],
+    ['Doanh thu','Giá BQ thực thu','DT khách / số khách',fm(a.P),'350k (KB)'],
+    ['Biên','Tỷ lệ giá vốn','CP vận hành / DTT',pc(r.cogs),'≤ 70% [họp]'],
+    ['Biên','Contribution / khách','ΔLNTT khi thêm 1 khách',fm(cm)+' đ','Sàn giá khuyến mại'],
+    ['Biên','Chi phí/km','(DTT − LNTT) / km',fm(r.cpkm)+' đ','Cặp với DT/km'],
+    ['Lợi nhuận','EBITDA/xe/tháng','EBIT + khấu hao',tr(r.ebitda*perXe),'Khả năng tạo tiền'],
+    ['Lợi nhuận','EBIT %','LN HĐKD / DTT',pc(r.ebit/r.D),''],
+    ['Lợi nhuận','ROS','LNTT / DTT',pc(r.ros,2),'10% [họp]'],
+    ['Hòa vốn','LF hòa vốn','Giải ROS = 0',beF===null?'Không đạt kể cả đầy xe':pc(beF/68),'< LF thực tế'],
+    ['Hòa vốn','LF tối thiểu chạy chuyến','Chi phí tiền mặt trực tiếp / DT/khách','≈ 50% (file, số tĩnh)','Ghép / hủy chuyến'],
+    ['Vốn','ROIC/xe (năm đầu, trên nguyên giá)','EBIT/xe/năm × (1 − 20% nếu EBIT > 0) / nguyên giá 3,698 tỷ',pc(roic),'> lãi suất vay (cần KTT)'],
+  ];
+  $('#finTbl').innerHTML='<table><tr><th>Tầng</th><th>Chỉ số</th><th>Công thức</th><th class="n">Hiện tại</th><th>Ngưỡng</th></tr>'+rows.map(x=>`<tr><td>${x[0]}</td><td><b>${x[1]}</b></td><td><span class="formula">${x[2]}</span></td><td class="n">${x[3]}</td><td>${x[4]}</td></tr>`).join('')+'</table>';
+}
+function dsCalc(){
+  const {a,r}=SIM, g=+$('#dsG').value*1e6, perXe=r.T;
+  const eb=r.ebitda*perXe, tx=r.thue*perXe, lv=a.lv, debt=g+lv, ds=debt>0?(eb-tx)/debt:null;
+  $('#dsV').textContent=fm(g/1e6)+' tr';
+  const maxG=(eb-tx)/1.2-lv;
+  $('#dsKpi').innerHTML=kpi('EBITDA − thuế / xe / tháng',tr(eb-tx),'')+(ds===null?kpi('DSCR','—','Không có nghĩa vụ nợ'):kpi('DSCR',fm(ds,2),'Ngưỡng 1,2',col3(ds,1,1.2)))+kpi('Gốc tối đa để DSCR ≥ 1,2',tr(Math.max(0,maxG)),'với lãi '+tr(lv));
+}
+$('#dsG').oninput=dsCalc;
+
+// ===== 6. VẬN HÀNH =====
+const OPS=[
+ ['Năng suất tài sản','Tỷ lệ xe vận doanh','Xe-ngày chạy / xe-ngày biên chế','Xe 24: 82%','Chưa có','Phơi lệnh'],
+ ['Năng suất tài sản','Lượt/xe/ngày','Lượt / (xe biên chế × ngày)','1,36','1,8 [họp]','Phơi lệnh'],
+ ['Năng suất tài sản','Km/xe/ngày','Km / (xe biên chế × ngày)','≈ 420','≥ 450 [họp]','GPS / phơi lệnh'],
+ ['Bán hàng','LF theo lượt','Khách / giường','61,8%','67,6% (XS); '+pc(TH.t10/68)+' (ROS 10%)','Phơi lệnh'],
+ ['Bán hàng','LF theo chiều × khung giờ','Như trên, phân tách','Chiều B ngày thấp nhất','','Phơi lệnh'],
+ ['Bán hàng','Tổng khách/ngày','','≈ 144','207 (XS)','Phơi lệnh'],
+ ['Bán hàng','Giá BQ thực thu','DT khách / khách','320k','350k','Phơi lệnh / hệ thống vé'],
+ ['Bán hàng','Tỷ lệ khuyến mại','Giảm giá / DT niêm yết','Chưa đo','','Hệ thống vé'],
+ ['Bán hàng','DT hàng/lượt','','1,1 tr','1,5 tr','Phơi lệnh'],
+ ['Chi phí vận hành','Nhiên liệu thực / định mức','L thực / (28 × km/100)','5,2–5,4 tr/chuyến','≤ 100%','Phơi lệnh dầu'],
+ ['Chi phí vận hành','Sửa chữa đ/km thực tế','CP sửa chữa / km','Chưa có','KTT: > 1.000 đ','Kế toán'],
+ ['Chi phí vận hành','Tỷ lệ chuyến hủy/ghép','','Chưa đo','','Điều độ'],
+ ['Chất lượng / an toàn','Đúng giờ xuất bến','','Chưa đo','','Điều độ / GPS'],
+ ['Chất lượng / an toàn','Khiếu nại / 1.000 khách','','Chưa đo','','Tổng đài'],
+ ['Chất lượng / an toàn','Vi phạm tốc độ / 10.000 km','','Chưa đo','','GPS'],
+];
+function opRender(g){
+  const rows=OPS.filter(x=>g==='all'||x[0]===g);
+  $('#opTbl').innerHTML='<table><tr><th>Nhóm</th><th>Chỉ số</th><th>Công thức</th><th>Hiện trạng [họp]</th><th>Mục tiêu</th><th>Nguồn dữ liệu</th></tr>'+rows.map(x=>`<tr><td>${x[0]}</td><td><b>${x[1]}</b></td><td>${x[2]?'<span class="formula">'+x[2]+'</span>':''}</td><td>${x[3].startsWith('Chưa')?'<span class="tag t-gray">'+x[3]+'</span>':x[3]}</td><td>${x[4]}</td><td>${x[5]}</td></tr>`).join('')+'</table><p class="src">Chỉ số “Chưa đo/Chưa có”: chưa có benchmark đáng tin — đề xuất lấy 3 tháng số liệu làm baseline trước khi đặt mục tiêu.</p>';
+}
+document.querySelectorAll('#opFilter button').forEach(b=>b.onclick=()=>opRender(b.dataset.g));opRender('all');
+
+const r1=x=>Math.round(x*10)/10, r100=x=>Math.round(x/100)*100;
+const AL=[ // [tên, đỏ, xanh, hướng (true = càng cao càng tốt), mặc định, đơn vị, căn cứ] — LF & DT/km tính từ BASE
+ ['LF theo lượt (%)',r1(TH.lfBe),r1(TH.lfT10),true,61.8,'%','Hòa vốn ≈ '+fm(TH.lfBe,1)+'%; ROS 10% ≈ '+fm(TH.lfT10,1)+'% (mô hình)'],
+ ['Lượt/xe/ngày',1.5,1.8,true,1.36,'','Chuẩn 1,8 [họp]'],
+ ['Giá BQ thực thu (đ)',330000,350000,true,320000,'đ','KB file'],
+ ['DT hàng/lượt (đ)',1100000,1500000,true,1100000,'đ','Hiện trạng và KB'],
+ ['DT thuần/km (đ)',r100(TH.kmBe),r100(TH.kmT10),true,23400,'đ','Hòa vốn ≈ '+fm(TH.kmBe)+'; ROS 10% ≈ '+fm(TH.kmT10)+' (mô hình, hàng 3 tr/chuyến)'],
+ ['Nhiên liệu thực / định mức (%)',105,100,false,100,'%','Định mức 28 L/100km'],
+];
+$('#alTbl').innerHTML='<table><tr><th>Chỉ số</th><th>Đỏ</th><th>Vàng</th><th>Xanh</th><th>Thực tế tuần</th><th>Trạng thái</th><th>Căn cứ</th></tr>'+AL.map((x,i)=>{
+  const f=v=>fm(v,Number.isInteger(v)?0:(Math.abs(v)<10?2:1));
+  const red=x[3]?'&lt; '+f(x[1]):'&gt; '+f(x[1]), amb=x[3]?f(x[1])+' – '+f(x[2]):f(x[2])+' – '+f(x[1]), grn=x[3]?'≥ '+f(x[2]):'≤ '+f(x[2]);
+  return `<tr><td><b>${x[0]}</b></td><td>${red}</td><td>${amb}</td><td>${grn}</td><td><input class="act" id="al${i}" type="number" step="any" value="${x[4]}"></td><td id="alS${i}"></td><td class="src">${x[6]}</td></tr>`}).join('')+'</table><p class="src">Giá trị mặc định = hiện trạng theo họp 22/10.</p>';
+function alCalc(){AL.forEach((x,i)=>{const raw=$('#al'+i).value;if(raw.trim()===''||isNaN(+raw)){$('#alS'+i).innerHTML='<span class="tag t-gray">—</span>';return;}const v=+raw;const k=x[3]?col3(v,x[1],x[2]):(v>x[1]?'red':v>x[2]?'amb':'grn');$('#alS'+i).innerHTML=`<span class="tag t-${k}">${k==='red'?'Đỏ':k==='amb'?'Vàng':'Xanh'}</span>`;});}
+AL.forEach((x,i)=>$('#al'+i).oninput=alCalc);alCalc();
+
+// ===== 7. LỖI & THẢO LUẬN =====
+const ERR=[
+ ['N118','Khấu hao nhập cứng, không liên kết nguyên giá M118 (3,698 tỷ). 41,69 tr (XS) và 51,71 tr (Đạt) đều không khớp 44 tr của KTT','Cao'],
+ ['N376 (Đạt)','Lãi vay nhân 6 xe trong khi N7 = 5 xe. Link \'Thẩm định T6.ĐB\'!Z10 trả về rỗng','Cao'],
+ ['M127, M263, M54','Hai kịch bản khác nhau ở giả định chi phí (CN 3/2%, QL 9/8%, dự phòng 5/0%). Kịch bản chỉ nên khác ở khách, giá, hàng','Cao'],
+ ['P408','Hòa vốn = (DTT − LNST) × 1,1: phải dùng LNTT, VAT 1,08, và tách chi phí theo % DT / theo khách','Trung bình'],
+ ['O153, P408, P415, cột Mộc Châu','Hệ số VAT lẫn lộn 1,08 và 1,1 — nên gom 1 ô tham số','Trung bình'],
+ ['Nhóm “Cố định”','Bến bãi, cầu đường, CN phát sinh theo chuyến/doanh thu nhưng xếp cố định → sai contribution margin','Trung bình'],
+ ['N78:N80','Sửa chữa lớn = 0 trong khi khấu hao 84 tháng → giá vốn thấp hơn thực tế (KTT cũng xác nhận)','Trung bình'],
+ ['O127','CN tính trên DT gồm VAT (O31) thay vì DTT (O32)','Thấp'],
+ ['E54 (cột 24)','Dự phòng = 5% × 400k thay vì 5% × 1,6 tr → thiếu ¾','Thấp'],
+ ['E7, E1','Cột 24 ghi 5 xe (thực tế 6); E1 = 14 xe phân bổ chi phí chung nhập cứng','Thấp'],
+ ['C5, C20','#REF!','Thấp'],
+ ['N141 (và tương tự N151, N161)','Đồng phục 3 nhân sự bán hàng là chi phí của cả tuyến nhưng chia cho số chuyến của 1 xe (O141 = N141/N16) → bị nhân 5 lần (lệch ~2.667 đ/chuyến). HTML giữ nguyên để khớp O130 = 2.730.989 đ','Thấp'],
+ ['M65','RÚT LẠI: giá dầu 30.080 là đúng — KTT xác nhận hạch toán nguyên giá, không chia 1,08','—'],
+];
+function errRender(s){
+  const rows=ERR.filter(x=>s==='all'||x[2]===s);
+  $('#errTbl').innerHTML='<table><tr><th>Ô</th><th>Vấn đề</th><th>Mức độ</th></tr>'+rows.map(x=>`<tr><td><span class="formula">${x[0]}</span></td><td>${x[1]}</td><td><span class="tag ${x[2]==='Cao'?'t-red':x[2]==='Trung bình'?'t-amb':x[2]==='Thấp'?'t-gray':'t-grn'}">${x[2]}</span></td></tr>`).join('')+'</table>';
+}
+document.querySelectorAll('#errFilter button').forEach(b=>b.onclick=()=>errRender(b.dataset.s));errRender('all');
+
+const BRX=bridge(CUR,REVP.xs), LV13=model({...BASE,lv:13e6}).ros-model(BASE).ros;
+const DISC=[
+ ['Giả định sản lượng ≈ +44–45% khách/ngày','Đã giao KD/MKT','KB Xuất sắc: 9 lượt × 23 = 207 khách/ngày vs hiện ≈ 143–144 (144 lượt / 21 ngày × 21 khách [họp]; Tab 3 tính 5 xe × 1,36 × 21 = 142,8). '+pc(BRX.s[0]/BRX.tot,1)+' mức tăng doanh thu đến từ vòng quay. Dấu hiệu sớm: sau 2 tuần, lượt/ngày không vượt 7,5 dù LF giữ nguyên.'],
+ ['Chi phí quản lý 9%','Đã chốt','Chênh 5,7 điểm % ROS so với 3,26%. Vẫn nên xin TCKT tỷ lệ QL/DT thực tế cấp công ty để đối chiếu.'],
+ ['Khấu hao 84 tháng','Đã chốt theo kế toán','Đi kèm cần: trích sửa chữa lớn và giá trị thanh lý (công ty đang thanh lý 40–42 xe → có dữ liệu giá xe cũ). Theo hiểu biết của tôi, khung TT 45/2013 cho phương tiện đường bộ là 6–10 năm — cần kế toán xác nhận.'],
+ ['Lãi vay','Đã chốt theo kế toán','13 tr hay 13,67 tr/xe — chênh ~'+fm(LV13*100,2)+' điểm % ROS (KB Xuất sắc). Cần lịch trả gốc để tính DSCR.'],
+ ['R&D 5%','Lưu ý trình bày','Thay dòng A&P 2% cũ → chi phí tăng thực +3%, không phải +5%.'],
+ ['Sửa chữa thực tế','Chờ KTT','Mỗi +1 điểm % tỷ trọng sửa chữa ≈ −1 điểm % ROS. Ngưỡng cảnh báo chưa nên ban hành trước khi có số này.'],
+ ['Phạm vi việc của PDA','Đã chốt','PDA không sửa file FBU; chuyển danh sách lỗi cho KTT Nam; lấy ngưỡng cảnh báo sau khi file chốt.'],
+];
+$('#disc').innerHTML=DISC.map(x=>`<details><summary><span>${x[0]}</span><span class="tag ${x[1].startsWith('Chờ')||x[1].startsWith('Lưu')?'t-amb':'t-grn'}">${x[1]}</span></summary><div class="body">${x[2]}</div></details>`).join('');
+
+simPreset('xs');
+</script>
+</body>
+</html>
